@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개 페이지</title>
+</head>
+<body>
+  <script>
+
+    function createProfileCard() {
+
+      const cardContainer = document.createElement('div');
+      cardContainer.style.width = '350px';
+      cardContainer.style.margin = 'auto';
+      cardContainer.style.backgroundColor = '#ffffff';
+      cardContainer.style.borderRadius = '15px';
+      cardContainer.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.1)';
+      cardContainer.style.padding = '20px';
+      cardContainer.style.textAlign = 'center';
+      
+      const profileImage = document.createElement('img');
+      profileImage.src = '민증사진.jpg';  // 프로필 이미지 경로
+      profileImage.alt = '프로필 이미지';
+      profileImage.style.width = '120px';
+      profileImage.style.height = '120px';
+      profileImage.style.borderRadius = '50%';
+      profileImage.style.marginBottom = '15px';
+
+      const name = document.createElement('h2');
+      name.textContent = '이재협';
+      name.style.fontSize = '28px';
+      name.style.fontWeight = 'bold';
+      name.style.color = '#333';
+
+      const jobTitle = document.createElement('p');
+      jobTitle.textContent = '대학생';
+      jobTitle.style.fontSize = '18px';
+      jobTitle.style.color = '#00796b';
+      jobTitle.style.margin = '10px 0';
+      
+      const intro = document.createElement('p');
+      intro.textContent = '안녕하세요, 저는 경성대학교에 재학중인 21학번 이재협입니다. 프로그래머가 되기위해 남들보다 한 걸음 더 많이 걷겠습니다.';
+      intro.style.fontSize = '16px';
+      intro.style.color = '#555';
+      intro.style.marginBottom = '20px';
+
+      const githubButton = document.createElement('a');
+      githubButton.textContent = 'GitHub 링크';
+      githubButton.href = 'https://github.com/jjjjj2e2e';  // 실제 GitHub 링크로 수정
+      githubButton.target = '_blank';
+      githubButton.style.display = 'inline-block';
+      githubButton.style.padding = '10px 20px';
+      githubButton.style.backgroundColor = '#00796b';
+      githubButton.style.color = '#fff';
+      githubButton.style.textDecoration = 'none';
+      githubButton.style.fontSize = '16px';
+      githubButton.style.borderRadius = '5px';
+
+      cardContainer.appendChild(profileImage);
+      cardContainer.appendChild(name);
+      cardContainer.appendChild(jobTitle);
+      cardContainer.appendChild(intro);
+      cardContainer.appendChild(githubButton);
+ 
+      document.body.appendChild(cardContainer);
+    }
+
+    createProfileCard();
+  </script>
+</body>
+</html>
